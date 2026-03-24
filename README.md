@@ -1,2 +1,2 @@
 # Bella-Landing-Page
-wonderful first contacto
+wonderful first contact
