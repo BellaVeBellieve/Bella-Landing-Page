@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isabel V Echavarria · Leadership Coach & Emotional Wisdom Specialist</title>
+  <meta name="description" content="Build your personal blueprint for a happier, better life. Free weekly sessions in Chiang Mai. Coaching, supervision, and emotional wisdom with Isabel V Echavarria.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1a1a18;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      border-radius: 8px;
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #F28A3C;
+      color: #ffffff;
+    }
+    .btn-primary:hover { filter: brightness(0.9); }
+
+    .btn-secondary {
+      background: transparent;
+      color: #1BBFB0;
+      border: 2px solid #1BBFB0;
+    }
+    .btn-secondary:hover { background: #E1F5EE; }
+
+    .btn-outline-orange {
+      background: transparent;
+      color: #F28A3C;
+      border: 2px solid #F28A3C;
+    }
+    .btn-outline-orange:hover { background: #FFF4EC; }
+
+    /* ─── NAVBAR ─── */
+    .navbar {
+      background: #ffffff;
+      border-bottom: 0.5px solid #e0d8d0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-logo img {
+      height: 48px;
+      mix-blend-mode: multiply;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .navbar-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #1a1a18;
+      transition: color 0.2s;
+    }
+    .navbar-links a:hover { color: #F28A3C; }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: #FFF4EC;
+      padding: 80px 0;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-text { order: 1; }
+    .hero-photo { order: 2; display: flex; justify-content: center; }
+
+    .tedx-badge {
+      display: inline-block;
+      background: #F28A3C;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero-headline {
+      font-family: 'Lora', serif;
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: #1a1a18;
+      margin-bottom: 16px;
+    }
+
+    .hero-thai {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-style: italic;
+      color: #5F5E5A;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .hero-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: #5F5E5A;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-photo-circle {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #F28A3C;
+    }
+
+    /* ─── TEDX BANNER ─── */
+    .tedx-banner {
+      background: #f7f5f0;
+      padding: 48px 0;
+    }
+
+    .tedx-banner-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .tedx-banner-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #F28A3C;
+      margin-bottom: 20px;
+    }
+
+    .tedx-banner-body {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.8;
+      color: #1a1a18;
+      margin-bottom: 28px;
+    }
+
+    .btn-teal {
+      background: #1BBFB0;
+      color: #ffffff;
+      border: none;
+    }
+    .btn-teal:hover { filter: brightness(0.9); }
+
+    /* ─── PHILOSOPHY ─── */
+    .philosophy {
+      background: #ffffff;
+      padding: 80px 0;
+    }
+
+    .philosophy-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #5F5E5A;
+      margin-bottom: 24px;
+    }
+
+    .philosophy-body {
+      font-family: 'Lora', serif;
+      font-size: 19px;
+      font-style: normal;
+      line-height: 1.8;
+      color: #1a1a18;
+      white-space: pre-line;
+      margin-bottom: 32px;
+      border-left: 3px solid #E8721A;
+      padding-left: 24px;
+      text-align: left;
+    }
+
+    .philosophy-thai {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #1BBFB0;
+      margin-bottom: 8px;
+    }
+
+    .philosophy-translation {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #5F5E5A;
+      font-style: italic;
+    }
+
+    /* ─── FREE SESSIONS ─── */
+    .free-sessions {
+      background: #FFF4EC;
+      padding: 80px 0;
+    }
+
+    .free-sessions-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .free-sessions-header .section-label {
+      margin-bottom: 16px;
+    }
+
+    .free-sessions-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      color: #5F5E5A;
+      margin-bottom: 8px;
+    }
+
+    .free-sessions-thai {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #1BBFB0;
+    }
+
+    .sessions-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .session-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .session-card-bar {
+      padding: 16px 24px;
+    }
+
+    .session-card-bar.orange { background: #F28A3C; }
+    .session-card-bar.teal { background: #1BBFB0; }
+
+    .session-day {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .session-time {
+      font-family: 'Lora', serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .session-card-body {
+      padding: 24px;
+    }
+
+    .session-title {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: #1a1a18;
+      margin-bottom: 12px;
+    }
+
+    .session-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      color: #5F5E5A;
+    }
+
+    .sessions-tag {
+      display: inline-block;
+      background: #f0ece7;
+      color: #5F5E5A;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 32px;
+    }
+
+    .free-sessions-footer {
+      text-align: center;
+    }
+
+    /* ─── BLUEPRINT ─── */
+    .blueprint {
+      background: #ffffff;
+      padding: 80px 0;
+    }
+
+    .blueprint-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .blueprint-programme-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #F28A3C;
+      margin-bottom: 12px;
+    }
+
+    .blueprint-heading {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: #1a1a18;
+      margin-bottom: 20px;
+    }
+
+    .blueprint-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #5F5E5A;
+      white-space: pre-line;
+      margin-bottom: 28px;
+    }
+
+    .blueprint-checks {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .blueprint-checks li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #1a1a18;
+      margin-bottom: 12px;
+    }
+
+    .check-circle {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      border-radius: 50%;
+      background: #1BBFB0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 13px;
+    }
+
+    .blueprint-quote-block {
+      background: #E1F5EE;
+      border: 2px solid #1BBFB0;
+      border-radius: 12px;
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .blueprint-quote {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-style: italic;
+      line-height: 1.7;
+      color: #1a1a18;
+      margin-bottom: 20px;
+    }
+
+    .blueprint-quote-attr {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #1BBFB0;
+      font-weight: 500;
+    }
+
+    /* ─── ABOUT ─── */
+    .about {
+      background: #FFF4EC;
+      padding: 80px 0;
+    }
+
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-image {
+      border-radius: 12px;
+      max-width: 320px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .about-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #5F5E5A;
+      margin-bottom: 12px;
+    }
+
+    .about-name {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: #1a1a18;
+      margin-bottom: 8px;
+    }
+
+    .about-role {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      color: #1BBFB0;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .about-bio {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #5F5E5A;
+      white-space: pre-line;
+      margin-bottom: 24px;
+    }
+
+    .credential-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .credential-pill {
+      background: #FFF4EC;
+      color: #E8721A;
+      border: 1px solid #E8721A;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 7px 16px;
+      border-radius: 20px;
+      letter-spacing: 0.02em;
+    }
+
+    .about-tedx {
+      font-family: 'Lora', serif;
+      font-size: 14px;
+      font-style: italic;
+      color: #1BBFB0;
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials {
+      background: #ffffff;
+      padding: 80px 0;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .testimonials-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: #f7f5f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-top: 3px solid #1BBFB0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .testimonial-quote {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-style: italic;
+      line-height: 1.7;
+      color: #1a1a18;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-divider {
+      width: 32px;
+      height: 2px;
+      background: #1BBFB0;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-attr {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #5F5E5A;
+    }
+
+    /* ─── EXPLORE FURTHER ─── */
+    .explore {
+      background: #ffffff;
+      padding: 80px 0;
+    }
+
+    .explore-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .explore-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .explore-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e0d8d0;
+    }
+
+    .explore-card-bar {
+      height: 6px;
+    }
+    .explore-card-bar.orange { background: #F28A3C; }
+    .explore-card-bar.teal { background: #1BBFB0; }
+
+    .explore-card-body {
+      padding: 24px;
+    }
+
+    .explore-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #5F5E5A;
+      margin-bottom: 10px;
+    }
+
+    .explore-title {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: #1a1a18;
+      margin-bottom: 10px;
+    }
+
+    .explore-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      color: #5F5E5A;
+    }
+
+    /* ─── STAY IN TOUCH ─── */
+    .stay-in-touch {
+      background: #1BBFB0;
+      padding: 80px 0;
+    }
+
+    .stay-in-touch-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .stay-heading {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .stay-thai {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .stay-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      background: #1a1a18;
+      padding: 56px 24px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      height: 60px;
+      margin: 0 auto 24px;
+    }
+
+    .footer-contact {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 10px;
+    }
+
+    .footer-tedx {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 10px;
+    }
+
+    .footer-copy {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 768px) {
+      .navbar-links { display: none; }
+
+      .hero { padding: 48px 0; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .hero-photo { order: 1; }
+      .hero-text { order: 2; }
+      .hero-headline { font-size: 26px; }
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons .btn { width: 100%; text-align: center; }
+
+      .philosophy { padding: 48px 0; }
+
+      .free-sessions { padding: 48px 0; }
+      .sessions-cards { grid-template-columns: 1fr; }
+
+      .blueprint { padding: 48px 0; }
+      .blueprint-inner { grid-template-columns: 1fr; gap: 40px; }
+
+      .about { padding: 48px 0; }
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .about-image { max-width: 100%; }
+
+      .testimonials { padding: 48px 0; }
+      .testimonials-cards { grid-template-columns: 1fr; }
+
+      .explore { padding: 48px 0; }
+      .explore-cards { grid-template-columns: 1fr; }
+
+      .stay-in-touch { padding: 48px 0; }
+
+      .blueprint-quote { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a class="navbar-logo" href="#">
+        <img src="SÖMBOLO-PRINCIPAL.png" alt="Isabel Vallejo Echavarria">
+      </a>
+      <ul class="navbar-links">
+        <li><a href="#free-sessions">Free sessions</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#stay-in-touch">Stay in touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="tedx-badge">TEDx Thonglor Women · 26 April 2025</span>
+        <h1 class="hero-headline">What if your emotions hide the solution and hold within them the answer?</h1>
+        <p class="hero-thai">อารมณ์ของคุณไม่ใช่ปัญหาที่ต้องแก้ไข — มันคือพลังงานที่รอให้คุณเข้าใจ</p>
+        <p class="hero-subtitle">Leadership Coach · Emotional Wisdom Specialist · Author</p>
+        <div class="hero-buttons">
+          <a href="https://appt.link/arte-de-estar/live-brighter-ZNqJ6P2h" target="_blank" rel="noopener" class="btn btn-primary">Book a free session</a>
+          <a href="#stay-in-touch" class="btn btn-secondary">Stay in touch</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="isa.2025.bigsmile.41.jpg" alt="Isabel Vallejo Echavarria" class="hero-photo-circle">
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PHILOSOPHY ─── -->
+  <section class="philosophy">
+    <div class="philosophy-inner">
+      <p class="section-label">The idea behind everything</p>
+      <p class="philosophy-body">We all want a happier, better life, and it does not look the same for everyone, and does not start in the same place.
+
+Maybe you are exhausted and cannot remember the last time you woke up refreshed. Maybe a relationship is taking more than it gives. Maybe you are standing at a crossroads and the next step is not clear.
+
+Together we build your personal blueprint — turning experiences into building blocks, and lessons learned into the light that shines the path to where you need to be.
+
+Let's start building.</p>
+      <p class="philosophy-thai">ไม่ว่าคุณจะอยู่ที่ไหน นั่นคือจุดเริ่มต้นของเรา</p>
+      <p class="philosophy-translation">Wherever you are, that is where we begin.</p>
+    </div>
+  </section>
+
+  <!-- ─── FREE SESSIONS ─── -->
+  <section class="free-sessions" id="free-sessions">
+    <div class="container">
+      <div class="free-sessions-header">
+        <p class="section-label">Free sessions at 4Seas Nimman · Chiang Mai</p>
+        <p class="free-sessions-subtitle">Come and experience the work. No commitment, no pressure.</p>
+        <p class="free-sessions-thai">เข้าร่วมฟรี · 4Seas Nimman เชียงใหม่</p>
+      </div>
+
+      <div class="sessions-cards">
+        <div class="session-card">
+          <div class="session-card-bar orange">
+            <p class="session-day">Every Friday</p>
+            <p class="session-time">10:30 am</p>
+          </div>
+          <div class="session-card-body">
+            <h3 class="session-title">Reclaim your energy</h3>
+            <p class="session-desc">For anyone exhausted, burned out, or struggling to sleep. Understand why rest alone is not enough — and what your nervous system actually needs. One practical tool to take home every week.</p>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="session-card-bar teal">
+            <p class="session-day">Every Tuesday</p>
+            <p class="session-time">4:00 pm</p>
+          </div>
+          <div class="session-card-body">
+            <h3 class="session-title">The spark: understanding your emotions</h3>
+            <p class="session-desc">Understand why you feel what you feel — in relationships, at work, with family. Learn to read the signal your emotions are sending instead of fighting the feeling. One insight, one practice, every week.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="free-sessions-footer">
+        <span class="sessions-tag">In English · Questions welcome in Thai · Free to attend</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TEDX BANNER 2 ─── -->
+  <section class="tedx-banner">
+    <div class="tedx-banner-inner">
+      <p class="tedx-banner-label">TEDx Thonglor Women · 26 April 2025</p>
+      <p class="tedx-banner-body">How well do you know the people closest to you? Do you truly understand why they made the decisions they did — or are you still reading them through an old script?<br><br>Join Isabel at TEDx Thonglor Women as she introduces a bolder way to navigate our most demanding relationships.</p>
+      <a href="https://www.ted.com/tedx/events/62030" target="_blank" rel="noopener" class="btn btn-teal">Find out more</a>
+    </div>
+  </section>
+
+  <!-- ─── BLUEPRINT ─── -->
+  <section class="blueprint">
+    <div class="blueprint-inner">
+      <div class="blueprint-text">
+        <p class="blueprint-programme-label">4-Session Programme</p>
+        <h2 class="blueprint-heading">Your Personal Blueprint</h2>
+        <p class="blueprint-body">Most people come to coaching with something specific on their mind — a relationship that is not working, a career transition, a body that will not rest, a version of themselves they have not yet become.
+
+Over four sessions, we go beneath the surface. We find the patterns, the beliefs, the emotional signals you have been trying to ignore. And we build something practical — a clear, personal path forward that is yours to walk.
+
+This is not a formula. It is a map we draw together.</p>
+        <ul class="blueprint-checks">
+          <li>
+            <span class="check-circle">✓</span>
+            Four one-hour sessions at your pace
+          </li>
+          <li>
+            <span class="check-circle">✓</span>
+            In person in Chiang Mai or online worldwide
+          </li>
+        </ul>
+        <a href="https://appt.link/arte-de-estar/live-brighter-ZNqJ6P2h" target="_blank" rel="noopener" class="btn btn-outline-orange">Let's talk about your blueprint</a>
+      </div>
+
+      <div class="blueprint-quote-block">
+        <p class="blueprint-quote">"I cannot promise you fulfilment. But I can help you find the path — and walk alongside you."</p>
+        <p class="blueprint-quote-attr">— Isabel</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <img src="PHOTO-2026-03-10-16-33-03.jpg" alt="Isabel at TEDx" class="about-image">
+      <div class="about-text">
+        <p class="about-label">About Isabel</p>
+        <h2 class="about-name">Isabel Vallejo Echavarria</h2>
+        <p class="about-role">Leadership Coach &amp; Emotional Wisdom Specialist</p>
+        <p class="about-bio">I am a systemic coach who blends emotional wisdom, somatic awareness, and design thinking to help people lead with empathy and clarity.
+
+Born in Colombia, I have spent 20 years guiding professionals through life's most demanding transitions across 11 cities in 7 countries. I work at the intersection of the nervous system, emotional intelligence, and the body's own wisdom — because real change lives in the body before it reaches the mind.</p>
+        <div class="credential-pills">
+          <span class="credential-pill">EMCC Accredited Supervisor</span>
+          <span class="credential-pill">Published Author</span>
+          <span class="credential-pill">TEDx Speaker</span>
+          <span class="credential-pill">20 Years Experience</span>
+        </div>
+        <p class="about-tedx">TEDx talk: Defining Balance for the Sandwich Generation · 26 April 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <p class="section-label">What clients say</p>
+      </div>
+      <div class="testimonials-cards">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"After only ten minutes of discussion I already got support and direction. I can follow it or go another way — but I already got an insight. It was great."</p>
+          <div>
+            <div class="testimonial-divider"></div>
+            <p class="testimonial-attr">Leadership Coach</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"A couple of insights, trusting the team's abilities and recognition of their pace. I really enjoyed the supervision."</p>
+          <div>
+            <div class="testimonial-divider"></div>
+            <p class="testimonial-attr">Team Coach</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"That is very nice, extremely helpful in such a short time. How did you learn to do that — is this a method?"</p>
+          <div>
+            <div class="testimonial-divider"></div>
+            <p class="testimonial-attr">Coaching client</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPLORE FURTHER ─── -->
+  <section class="explore">
+    <div class="container">
+      <div class="explore-header">
+        <p class="section-label">Explore further</p>
+      </div>
+      <div class="explore-cards">
+        <div class="explore-card">
+          <div class="explore-card-bar orange"></div>
+          <div class="explore-card-body">
+            <p class="explore-tag">Book</p>
+            <h3 class="explore-title">New Boundaries</h3>
+            <p class="explore-desc">An 8-step framework and 28-day workbook for setting clear, healthy boundaries in every area of your life.</p>
+          </div>
+        </div>
+
+        <div class="explore-card">
+          <div class="explore-card-bar teal"></div>
+          <div class="explore-card-body">
+            <p class="explore-tag">Programme</p>
+            <h3 class="explore-title">Rest Smarter, Live Brighter</h3>
+            <p class="explore-desc">For anyone struggling with sleep, burnout, or exhaustion. Understand your nervous system and reclaim your energy.</p>
+          </div>
+        </div>
+
+        <div class="explore-card">
+          <div class="explore-card-bar orange"></div>
+          <div class="explore-card-body">
+            <p class="explore-tag">Workshop</p>
+            <h3 class="explore-title">Emotional Wisdom</h3>
+            <p class="explore-desc">Understand your emotional hard drive — release what drains you, upgrade to what sustains you. For entrepreneurs and anyone ready to grow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STAY IN TOUCH ─── -->
+  <section class="stay-in-touch" id="stay-in-touch">
+    <div class="stay-in-touch-inner">
+      <h2 class="stay-heading">Stay in touch</h2>
+      <p class="stay-thai">รับข้อมูลเพิ่มเติม</p>
+      <p class="stay-sub">Not ready to book yet? Leave your name and email and tell us what brings you here. We will be in touch.</p>
+      <iframe data-tally-src="https://tally.so/embed/rjVOd5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Stay in Touch"></iframe>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <img src="LOGO-PRINCIPAL-DRA.-IVE-COLORES.png" alt="Isabel Vallejo Echavarria" class="footer-logo">
+    <p class="footer-contact">bloom@supervisorcoaching.com · (+66) 936 371 824</p>
+    <p class="footer-tedx">TEDx Thonglor Women · 26 April 2025 · Defining Balance for the Sandwich Generation</p>
+    <p class="footer-copy">© 2025 Isabel Vallejo Echavarria · supervisorcoaching.com</p>
+  </footer>
+
+  <script>
+    var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.getElementById("tally-js")==null){var s=d.createElement("script");s.src=w;s.id="tally-js";s.onload=v;d.body.appendChild(s);}
+  </script>
+</body>
+</html>
