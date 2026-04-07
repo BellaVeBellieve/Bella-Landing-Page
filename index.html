@@ -169,6 +169,8 @@
       .blueprint-inner { grid-template-columns: 1fr; gap: 40px; }
       .about-inner { grid-template-columns: 1fr; gap: 36px; }
       .testimonials-cards { grid-template-columns: 1fr; }
+      .tedx-banner > div { grid-template-columns: 1fr !important; }
+      .tedx-banner > div img { max-height: 300px; }
     }
   </style>
 </head>
@@ -197,7 +199,6 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-text">
-        <span class="tedx-badge" data-i18n="tedx-badge">TEDx Thonglor Women · 26 April 2026</span>
         <p class="hero-opening" data-i18n="hero-opening">When was the last time you felt happy about being you?<br>
           <em>Not performing. Not managing. Not just getting through the day.</em><br><br>
           When did you last say — quietly, to yourself — <em>that was good.</em><br>
@@ -318,10 +319,13 @@
 
   <!-- TEDX -->
   <section class="tedx-banner">
-    <div class="tedx-banner-inner">
-      <p class="tedx-label" data-i18n="tedx-label">TEDx Thonglor Women · 26 April 2026</p>
-      <p class="tedx-body" data-i18n="tedx-body">How well do you know the people closest to you? Do you truly understand why they made the decisions they did — or are you still reading them through an old script?<br><br>Join Isabel at TEDx Thonglor Women as she introduces a bolder way to navigate our most demanding relationships: <em>Defining Balance for the Sandwich Generation.</em></p>
-      <a href="https://www.ted.com/tedx/events/62030" target="_blank" rel="noopener" class="btn btn-salmon" data-i18n="tedx-btn">Find out more</a>
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:center;">
+      <div>
+        <p class="tedx-label" data-i18n="tedx-label">TEDx Thonglor Women · 26 April 2026</p>
+        <p class="tedx-body" data-i18n="tedx-body">How well do you know the people closest to you? Do you truly understand why they made the decisions they did — or are you still reading them through an old script?<br><br>Join Isabel at TEDx Thonglor Women as she introduces a bolder way to navigate our most demanding relationships: <em>Defining Balance for the Sandwich Generation.</em></p>
+        <a href="https://www.ted.com/tedx/events/62030" target="_blank" rel="noopener" class="btn btn-salmon" data-i18n="tedx-btn">Find out more</a>
+      </div>
+      <img src="PHOTO-2026-03-10-16-33-03.jpg" alt="Isabel VE" style="width:100%;border-radius:14px;object-fit:cover;box-shadow:0 4px 24px rgba(0,0,0,0.10);">
     </div>
   </section>
 
@@ -349,7 +353,7 @@
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="about-inner">
-      <img src="PHOTO-2026-03-10-16-33-03.jpg" alt="Isabel VE" class="about-image">
+      <img src="isa.2025.doors.55.jpg" alt="Isabel VE" class="about-image">
       <div>
         <p class="about-label" data-i18n="about-label">About Isabel</p>
         <h2 class="about-name">Isabel VE</h2>
