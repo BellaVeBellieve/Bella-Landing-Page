@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isabel VE · Leadership Coach & Emotional Wisdom Specialist</title>
+  <meta name="description" content="Coaching, supervision and emotional wisdom with Isabel VE. Build a life that feels like yours — fuller, calmer, and genuinely present.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a18; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    :root { --salmon: #E8735A; --aqua: #1BBFB0; --cream: #FFF8F5; --stone: #f7f5f0; --ink: #1a1a18; --muted: #5F5E5A; --border: #e8e0d8; }
+
+    .btn { display: inline-block; border-radius: 8px; padding: 14px 28px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 15px; cursor: pointer; transition: all 0.2s; border: none; text-align: center; }
+    .btn-salmon { background: var(--salmon); color: #fff; }
+    .btn-salmon:hover { filter: brightness(0.92); }
+    .btn-aqua { background: var(--aqua); color: #fff; }
+    .btn-aqua:hover { filter: brightness(0.92); }
+    .btn-outline-salmon { background: transparent; color: var(--salmon); border: 2px solid var(--salmon); }
+    .btn-outline-salmon:hover { background: #FFF0EC; }
+    .btn-outline-aqua { background: transparent; color: var(--aqua); border: 2px solid var(--aqua); }
+    .btn-outline-aqua:hover { background: #E8F8F6; }
+
+    /* NAVBAR */
+    .navbar { background: #fff; border-bottom: 0.5px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .navbar-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .navbar-logo img { height: 48px; mix-blend-mode: multiply; }
+    .navbar-right { display: flex; align-items: center; gap: 28px; }
+    .navbar-links { display: flex; gap: 28px; list-style: none; }
+    .navbar-links a { font-size: 14px; font-weight: 400; color: var(--ink); transition: color 0.2s; }
+    .navbar-links a:hover { color: var(--salmon); }
+    .navbar-cta { background: var(--salmon); color: #fff !important; padding: 8px 20px; border-radius: 8px; font-weight: 500 !important; font-size: 14px; white-space: nowrap; }
+    .navbar-cta:hover { filter: brightness(0.92); }
+    .lang-toggle { display: flex; align-items: center; gap: 4px; background: var(--stone); border-radius: 20px; padding: 4px 6px; border: 1px solid var(--border); }
+    .lang-btn { font-size: 12px; font-weight: 500; font-family: 'Inter', sans-serif; padding: 4px 10px; border-radius: 16px; border: none; background: transparent; color: var(--muted); cursor: pointer; transition: all 0.2s; letter-spacing: 0.05em; }
+    .lang-btn.active { background: #fff; color: var(--salmon); box-shadow: 0 1px 4px rgba(0,0,0,0.10); }
+
+    /* HERO */
+    .hero { background: var(--cream); padding: 90px 0 80px; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: center; }
+    .hero-text { order: 1; }
+    .hero-photo { order: 2; display: flex; justify-content: center; }
+    .tedx-badge { display: inline-block; background: var(--salmon); color: #fff; font-size: 12px; font-weight: 500; padding: 6px 16px; border-radius: 20px; margin-bottom: 28px; letter-spacing: 0.03em; }
+    .hero-opening { font-family: 'Lora', serif; font-size: 15px; font-style: italic; color: var(--muted); line-height: 2; margin-bottom: 32px; }
+    .hero-opening em { font-style: normal; color: var(--ink); font-weight: 500; }
+    .hero-headline { font-family: 'Lora', serif; font-size: 34px; font-weight: 400; line-height: 1.35; color: var(--ink); margin-bottom: 18px; }
+    .hero-subtitle { font-size: 16px; font-weight: 300; color: var(--muted); margin-bottom: 36px; line-height: 1.65; }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-photo-img { width: 360px; height: 420px; object-fit: cover; object-position: top center; border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.10); }
+
+    /* INVITATION */
+    .invitation { background: #fff; padding: 88px 0; }
+    .invitation-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; text-align: center; }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+    .invitation-lines { font-family: 'Lora', serif; font-size: 21px; font-style: italic; line-height: 2.1; color: var(--ink); margin-bottom: 28px; }
+    .invitation-bridge { font-size: 16px; color: var(--muted); line-height: 1.85; }
+    .invitation-bridge strong { color: var(--salmon); font-weight: 500; }
+
+    /* SERVICES */
+    .services { background: var(--stone); padding: 88px 0; }
+    .services-header { text-align: center; margin-bottom: 56px; }
+    .services-heading { font-family: 'Lora', serif; font-size: 28px; font-weight: 400; color: var(--ink); margin-top: 12px; }
+    .services-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .service-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
+    .service-card-bar { height: 5px; }
+    .service-card-bar.salmon { background: var(--salmon); }
+    .service-card-bar.aqua { background: var(--aqua); }
+    .service-card-body { padding: 28px 28px 20px; flex: 1; display: flex; flex-direction: column; }
+    .service-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .service-title { font-family: 'Lora', serif; font-size: 21px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
+    .service-hook { font-size: 14px; font-style: italic; color: var(--salmon); margin-bottom: 14px; line-height: 1.6; }
+    .service-desc { font-size: 15px; line-height: 1.75; color: var(--muted); flex: 1; }
+    .service-card-footer { padding: 20px 28px 28px; }
+
+    /* PHILOSOPHY */
+    .philosophy { background: var(--aqua); padding: 80px 0; }
+    .philosophy-inner { max-width: 680px; margin: 0 auto; padding: 0 24px; text-align: center; }
+    .philosophy-quote { font-family: 'Lora', serif; font-size: 22px; font-style: italic; line-height: 1.85; color: #fff; margin-bottom: 20px; }
+    .philosophy-attr { font-size: 12px; color: rgba(255,255,255,0.7); letter-spacing: 0.10em; text-transform: uppercase; }
+
+    /* FREE SESSIONS */
+    .free-sessions { background: var(--cream); padding: 88px 0; }
+    .free-sessions-header { text-align: center; margin-bottom: 48px; }
+    .free-sessions-heading { font-family: 'Lora', serif; font-size: 28px; font-weight: 400; color: var(--ink); margin: 12px 0 10px; }
+    .free-sessions-sub { font-size: 16px; color: var(--muted); }
+    .sessions-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+    .session-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .session-card-bar { padding: 18px 28px; }
+    .session-card-bar.salmon { background: var(--salmon); }
+    .session-card-bar.aqua { background: var(--aqua); }
+    .session-day { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.08em; }
+    .session-time { font-family: 'Lora', serif; font-size: 26px; font-weight: 500; color: #fff; }
+    .session-card-body { padding: 26px 28px; }
+    .session-title { font-family: 'Lora', serif; font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
+    .session-desc { font-size: 15px; line-height: 1.7; color: var(--muted); }
+    .sessions-note-wrap { text-align: center; }
+    .sessions-note { display: inline-block; font-size: 13px; color: var(--muted); background: #fff; padding: 8px 20px; border-radius: 20px; border: 1px solid var(--border); }
+
+    /* TEDX */
+    .tedx-banner { background: var(--stone); padding: 72px 0; }
+    .tedx-banner-inner { max-width: 660px; margin: 0 auto; padding: 0 24px; text-align: center; }
+    .tedx-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--salmon); margin-bottom: 20px; }
+    .tedx-body { font-family: 'Lora', serif; font-size: 18px; font-style: italic; line-height: 1.85; color: var(--ink); margin-bottom: 28px; }
+
+    /* BLUEPRINT */
+    .blueprint { background: #fff; padding: 88px 0; }
+    .blueprint-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .blueprint-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--salmon); margin-bottom: 14px; }
+    .blueprint-heading { font-family: 'Lora', serif; font-size: 30px; font-weight: 400; color: var(--ink); margin-bottom: 20px; }
+    .blueprint-body { font-size: 16px; line-height: 1.85; color: var(--muted); margin-bottom: 28px; }
+    .blueprint-checks { list-style: none; margin-bottom: 36px; }
+    .blueprint-checks li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--ink); margin-bottom: 12px; }
+    .check-dot { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: var(--aqua); margin-top: 6px; }
+    .blueprint-quote-block { background: var(--cream); border-left: 4px solid var(--salmon); border-radius: 0 14px 14px 0; padding: 44px 40px; }
+    .blueprint-quote { font-family: 'Lora', serif; font-size: 20px; font-style: italic; line-height: 1.8; color: var(--ink); margin-bottom: 20px; }
+    .blueprint-quote-attr { font-size: 14px; color: var(--salmon); font-weight: 500; }
+
+    /* ABOUT */
+    .about { background: var(--stone); padding: 88px 0; }
+    .about-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 320px 1fr; gap: 64px; align-items: start; }
+    .about-image { width: 100%; border-radius: 14px; object-fit: cover; box-shadow: 0 4px 24px rgba(0,0,0,0.10); }
+    .about-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .about-name { font-family: 'Lora', serif; font-size: 30px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+    .about-role { font-size: 16px; color: var(--aqua); font-weight: 400; margin-bottom: 22px; }
+    .about-bio { font-size: 16px; line-height: 1.85; color: var(--muted); margin-bottom: 28px; }
+    .credential-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+    .credential-pill { background: #fff; color: var(--salmon); border: 1px solid var(--salmon); font-size: 12px; font-weight: 500; padding: 7px 16px; border-radius: 20px; }
+    .about-tedx { font-family: 'Lora', serif; font-size: 14px; font-style: italic; color: var(--aqua); }
+
+    /* TESTIMONIALS */
+    .testimonials { background: #fff; padding: 88px 0; }
+    .testimonials-header { text-align: center; margin-bottom: 48px; }
+    .testimonials-heading { font-family: 'Lora', serif; font-size: 26px; font-weight: 400; color: var(--ink); margin-top: 10px; }
+    .testimonials-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testimonial-card { background: var(--stone); border-radius: 14px; padding: 28px; border-top: 3px solid var(--aqua); display: flex; flex-direction: column; justify-content: space-between; }
+    .testimonial-quote { font-family: 'Lora', serif; font-size: 16px; font-style: italic; line-height: 1.75; color: var(--ink); margin-bottom: 20px; }
+    .testimonial-divider { width: 28px; height: 2px; background: var(--aqua); margin-bottom: 10px; }
+    .testimonial-attr { font-size: 13px; color: var(--muted); }
+
+    /* STAY */
+    .stay { background: var(--salmon); padding: 88px 0; }
+    .stay-inner { max-width: 580px; margin: 0 auto; padding: 0 24px; }
+    .stay-heading { font-family: 'Lora', serif; font-size: 30px; font-weight: 400; color: #fff; margin-bottom: 12px; }
+    .stay-sub { font-size: 16px; color: rgba(255,255,255,0.88); line-height: 1.75; margin-bottom: 36px; }
+
+    /* FOOTER */
+    .footer { background: #1a1a18; padding: 56px 24px; text-align: center; }
+    .footer-logo { height: 56px; margin: 0 auto 24px; }
+    .footer-contact { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 10px; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .navbar-links { display: none; }
+      .hero { padding: 52px 0; }
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .hero-photo { order: 1; }
+      .hero-text { order: 2; }
+      .hero-photo-img { width: 100%; height: 300px; }
+      .hero-headline { font-size: 26px; }
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons .btn { width: 100%; text-align: center; }
+      .invitation-lines { font-size: 18px; }
+      .services-cards { grid-template-columns: 1fr; }
+      .sessions-cards { grid-template-columns: 1fr; }
+      .blueprint-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-inner { grid-template-columns: 1fr; gap: 36px; }
+      .testimonials-cards { grid-template-columns: 1fr; }
+      .tedx-banner > div { grid-template-columns: 1fr !important; }
+      .tedx-banner > div img { max-height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a class="navbar-logo" href="#"><img src="simbolo-principal.png" alt="Isabel VE"></a>
+      <div class="navbar-right">
+        <ul class="navbar-links">
+          <li><a href="#sessions" data-i18n="nav-sessions">Free sessions</a></li>
+          <li><a href="#about" data-i18n="nav-about">About</a></li>
+          <li><a href="#stay" data-i18n="nav-stay">Stay in touch</a></li>
+          <li><a href="https://calendar.app.google/yjYYAfy1vtNLycLs6" target="_blank" class="navbar-cta" data-i18n="nav-book">Let's Talk — 20 min Clarity Session</a></li>
+        </ul>
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-opening" data-i18n="hero-opening">When was the last time you felt happy about being you?<br>
+          <em>Not performing. Not managing. Not just getting through the day.</em><br><br>
+          When did you last say — quietly, to yourself — <em>that was good.</em><br>
+          Not bragging. Just noticing.<br><br>
+          When was the last time you caught yourself smiling — <em>and knew exactly why?</em>
+        </p>
+        <h1 class="hero-headline" data-i18n="hero-headline">A life where it makes you happy to be you is closer than you think.</h1>
+        <p class="hero-subtitle" data-i18n="hero-subtitle">Leadership Coach · Emotional Wisdom Specialist · EMCC Accredited Supervisor</p>
+        <div class="hero-buttons">
+          <a href="https://calendar.app.google/yjYYAfy1vtNLycLs6" target="_blank" class="btn btn-salmon" data-i18n="hero-btn1">Book a free session</a>
+          <a href="#stay" class="btn btn-outline-aqua" data-i18n="hero-btn2">Stay in touch</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="isa.2025.bigsmile.41.jpg" alt="Isabel VE" class="hero-photo-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- INVITATION -->
+  <section class="invitation">
+    <div class="invitation-inner">
+      <p class="section-label" data-i18n="inv-label">The idea behind everything</p>
+      <div class="invitation-lines" data-i18n="inv-lines">
+        <p>We all want a happier, fuller life.</p>
+        <p>It does not look the same for everyone.</p>
+        <p>And it does not start in the same place.</p>
+      </div>
+      <p class="invitation-bridge" data-i18n="inv-bridge">Maybe you are standing at a crossroads and the next step is not clear. Maybe you are exhausted and cannot remember the last time you woke up refreshed — truly ready to start the day. Maybe a relationship is complicated, offering little and taking much.<br><br>Together we build your personal blueprint — turning lived experiences into the path, and lessons learned into the light that illuminates it.<br><br><strong>Let's build.</strong></p>
+    </div>
+  </section>
+
+  <!-- OFFERINGS -->
+  <section class="services" id="services">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px;">
+      <div class="services-header">
+        <p class="section-label" data-i18n="svc-label">What would you like to work on?</p>
+        <h2 class="services-heading" data-i18n="svc-heading">Three ways to work together.</h2>
+      </div>
+      <div class="services-cards">
+
+        <div class="service-card">
+          <div class="service-card-bar salmon"></div>
+          <div class="service-card-body">
+            <p class="service-tag" data-i18n="svc-tag">1-to-1</p>
+            <h3 class="service-title" data-i18n="svc1-title">Founding Spark</h3>
+            <p class="service-hook" data-i18n="svc1-hook">You are building something. And you are the motor behind it all.</p>
+            <p class="service-desc" data-i18n="svc1-desc">We work with your longings and unfinished business — and with what lies behind them. Because how you lead yourself determines everything else. One-to-one coaching for entrepreneurs and independent professionals.</p>
+          </div>
+          <div class="service-card-footer"><a href="https://calendar.app.google/yjYYAfy1vtNLycLs6" target="_blank" class="btn btn-outline-salmon" style="font-size:14px;padding:10px 20px;" data-i18n="svc1-btn">Book a clarity session</a></div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-bar aqua"></div>
+          <div class="service-card-body">
+            <p class="service-tag" data-i18n="svc-tag2">Supervision</p>
+            <h3 class="service-title" data-i18n="svc2-title">Coaching Supervision</h3>
+            <p class="service-hook" data-i18n="svc2-hook">A brave space for reflection, reflexion, regeneration, and growth as a coach.</p>
+            <p class="service-desc" data-i18n="svc2-desc">For coaches, mentors, and supervisors ready to deepen their practice. Individual and group supervision in a confidential, professionally grounded space. EMCC accredited. Sessions in English or Spanish.<br><br>Our world is uncertain, complex, and often contradictory. Supervision is where we explore and unpack. Where you build the inner tools to meet it with steadiness, and guide others to do so too.</p>
+          </div>
+          <div class="service-card-footer"><a href="https://calendar.app.google/yjYYAfy1vtNLycLs6" target="_blank" class="btn btn-outline-aqua" style="font-size:14px;padding:10px 20px;" data-i18n="svc2-btn">Book a session</a></div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-bar salmon"></div>
+          <div class="service-card-body">
+            <p class="service-tag" data-i18n="svc-tag3">Group</p>
+            <h3 class="service-title" data-i18n="svc3-title">Circles</h3>
+            <p class="service-hook" data-i18n="svc3-hook">Learning is deeper when it happens together.</p>
+            <p class="service-desc" data-i18n="svc3-desc">Group coaching in a structured, supportive space for shared questioning, understanding and creating awareness. Join a circle and grow alongside others asking the same questions.</p>
+          </div>
+          <div class="service-card-footer"><a href="series.html" class="btn btn-outline-salmon" style="font-size:14px;padding:10px 20px;" data-i18n="svc3-btn">Join a circle →</a></div>
+        </div>
+      </div>
+
+      <!-- FREE SESSIONS INLINE -->
+      <div style="margin-top:48px;" id="sessions">
+        <p class="section-label" style="text-align:center;margin-bottom:12px;" data-i18n="fs-label">Free sessions · 4Seas Nimman · Chiang Mai</p>
+        <h3 style="font-family:'Lora',serif;font-size:22px;font-weight:400;color:var(--ink);text-align:center;margin-bottom:8px;" data-i18n="fs-heading">Come and experience the work.</h3>
+        <p style="font-size:15px;color:var(--muted);text-align:center;margin-bottom:32px;" data-i18n="fs-sub">No commitment, no pressure. One practical tool to take home every week.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:20px;">
+          <div class="session-card">
+            <div class="session-card-bar aqua">
+              <p class="session-day" data-i18n="fs1-day">Every Friday</p>
+              <p class="session-time">10:30 am</p>
+            </div>
+            <div class="session-card-body">
+              <h3 class="session-title">Rest Smarter, Live Brighter</h3>
+              <p class="session-desc" data-i18n="fs1-desc">For anyone exhausted, burned out, or struggling to sleep. Understand why rest alone is not enough — and what your nervous system actually needs.</p>
+            </div>
+          </div>
+          <div class="session-card">
+            <div class="session-card-bar salmon">
+              <p class="session-day" data-i18n="fs2-day">Every Tuesday</p>
+              <p class="session-time">4:00 pm</p>
+            </div>
+            <div class="session-card-body">
+              <h3 class="session-title">The Spark</h3>
+              <p class="session-desc" data-i18n="fs2-desc">Understand why you feel what you feel — in relationships, at work, with family. Learn to read the signal your emotions are sending instead of fighting the feeling.</p>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <span class="sessions-note" data-i18n="fs-note">In English · Free to attend · 4Seas Nimman, Chiang Mai</span>
+        </div>
+      </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy">
+    <div class="philosophy-inner">
+      <p class="philosophy-quote" data-i18n="phil-quote">"What if your emotions hide the solution — and hold within them the answer?"</p>
+      <p class="philosophy-attr">— ISABEL · TEDx THONGLOR WOMEN 2026</p>
+    </div>
+  </section>
+
+  <!-- Free sessions moved under Circles card -->
+
+  <!-- TEDX -->
+  <section class="tedx-banner">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:center;">
+      <div>
+        <p class="tedx-label" data-i18n="tedx-label">TEDx Thonglor Women · 26 April 2026</p>
+        <p class="tedx-body" data-i18n="tedx-body">How well do you know the people closest to you? Do you truly understand why they made the decisions they did — or are you still reading them through an old script?<br><br>Join Isabel at TEDx Thonglor Women as she introduces a bolder way to navigate our most demanding relationships: <em>Defining Balance for the Sandwich Generation.</em></p>
+        <a href="https://www.ted.com/tedx/events/62030" target="_blank" rel="noopener" class="btn btn-salmon" data-i18n="tedx-btn">Find out more</a>
+      </div>
+      <img src="PHOTO-2026-03-10-16-33-03.jpg" alt="Isabel VE" style="width:100%;border-radius:14px;object-fit:cover;box-shadow:0 4px 24px rgba(0,0,0,0.10);">
+    </div>
+  </section>
+
+  <!-- BLUEPRINT -->
+  <section class="blueprint">
+    <div class="blueprint-inner">
+      <div>
+        <p class="blueprint-label" data-i18n="bp-label">4-Session Programme</p>
+        <h2 class="blueprint-heading" data-i18n="bp-heading">Your Personal Blueprint</h2>
+        <p class="blueprint-body" data-i18n="bp-body">A four-week hands-on programme where you clarify your priorities and begin the journey to reach them.<br><br>Most people arrive with something specific in mind — a relationship that is not working, a career transition, a body that will not rest, a version of themselves they have not yet become.<br><br>Over those four sessions, we start the journey back to the most authentic version of you. We go beneath the surface. We find the patterns, the beliefs, the emotional signals you have been trying to ignore. And we build something practical — a clear, personal path that is yours to walk.<br><br>This is not a formula. It is a map we draw together.</p>
+        <ul class="blueprint-checks">
+          <li><span class="check-dot"></span><span data-i18n="bp-check1">Four one-hour sessions at your pace</span></li>
+          <li><span class="check-dot"></span><span data-i18n="bp-check2">In person in Chiang Mai or online worldwide</span></li>
+          <li><span class="check-dot"></span><span data-i18n="bp-check3">A book: <em>New Boundaries</em> — 8-step framework &amp; 28-day workbook</span></li>
+        </ul>
+        <a href="https://calendar.app.google/yjYYAfy1vtNLycLs6" target="_blank" class="btn btn-salmon" data-i18n="bp-btn">Let's talk about your blueprint</a>
+      </div>
+      <div class="blueprint-quote-block">
+        <p class="blueprint-quote" data-i18n="bp-quote">"You will find your motivation, your reason why. And together, we will gently build the path you will walk to get there."</p>
+        <p class="blueprint-quote-attr">— Isabel</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <img src="isa.2025.doors.55.jpg" alt="Isabel VE" class="about-image">
+      <div>
+        <p class="about-label" data-i18n="about-label">About Isabel</p>
+        <h2 class="about-name">Isabel VE</h2>
+        <p class="about-role" data-i18n="about-role">Leadership Coach · Emotional Wisdom Specialist · EMCC Accredited Supervisor</p>
+        <p class="about-bio" data-i18n="about-bio">I am a systemic coach who blends emotional wisdom, somatic awareness, and design thinking to help people lead with empathy and clarity.<br><br>Over 20 years and across 11 cities in 7 countries, I have guided professionals through life's most demanding transitions. I work at the intersection of the nervous system, emotional intelligence, and the body's own wisdom — because real change lives in the body before it reaches the mind.<br><br>With a background in systems engineering, behavioural science, and cultural dynamics, I guide leaders and individuals towards meaningful, lasting transformation.</p>
+        <div class="credential-pills">
+          <span class="credential-pill" data-i18n="cred1">EMCC Accredited Supervisor</span>
+          <span class="credential-pill" data-i18n="cred2">Published Author</span>
+          <span class="credential-pill" data-i18n="cred3">TEDx Speaker 2026</span>
+          <span class="credential-pill" data-i18n="cred4">Systems Engineer</span>
+          <span class="credential-pill" data-i18n="cred5">20 Years Experience</span>
+        </div>
+        <p class="about-tedx" data-i18n="about-tedx">TEDx talk: <em>Defining Balance for the Sandwich Generation</em> · 26 April 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px;">
+      <div class="testimonials-header">
+        <p class="section-label" data-i18n="test-label">What clients say</p>
+        <h2 class="testimonials-heading" data-i18n="test-heading">The work speaks for itself.</h2>
+      </div>
+      <div class="testimonials-cards">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"After only ten minutes of discussion I already got support and direction. I can follow it or go another way — but I already got an insight. It was great."</p>
+          <div><div class="testimonial-divider"></div><p class="testimonial-attr" data-i18n="test-attr1">Leadership Coach</p></div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"A couple of insights, trusting the team's abilities and recognition of their pace. I really enjoyed the supervision."</p>
+          <div><div class="testimonial-divider"></div><p class="testimonial-attr" data-i18n="test-attr2">Team Coach</p></div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"That is very nice, extremely helpful in such a short time. How did you learn to do that — is this a method?"</p>
+          <div><div class="testimonial-divider"></div><p class="testimonial-attr" data-i18n="test-attr3">Coaching client</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAY -->
+  <section class="stay" id="stay">
+    <div class="stay-inner">
+      <h2 class="stay-heading" data-i18n="stay-heading">Stay in touch.</h2>
+      <p class="stay-sub" data-i18n="stay-sub">Not ready to book yet? Leave your name and email and tell us what brings you here. We will be in touch — no pressure, no noise.</p>
+      <iframe id="tally-iframe" data-tally-src="https://tally.so/embed/rjVOd5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Stay in Touch"></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="LOGO-PRINCIPAL-DRA.-IVE-COLORES.png" alt="Motiva Coaching & Supervision" class="footer-logo">
+    <p class="footer-contact"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dab8b6b5b5b79aa9afaabfa8acb3a9b5a8b9b5bbb9b2b3b4bdf4b9b5b7">[email&#160;protected]</a> · (+66) 936 371 824</p>
+    <p class="footer-copy">© 2026 Isabel VE · supervisorcoaching.com</p>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const translations = {
+      en: {
+        'nav-sessions': 'Free sessions', 'nav-about': 'About', 'nav-stay': 'Stay in touch', 'nav-book': 'Let\'s Talk — 20 min Clarity Session',
+        'tedx-badge': 'TEDx Thonglor Women · 26 April 2026',
+        'hero-opening': 'When was the last time you felt happy about being you?<br><em>Not performing. Not managing. Not just getting through the day.</em><br><br>When did you last say — quietly, to yourself — <em>that was good.</em><br>Not bragging. Just noticing.<br><br>When was the last time you caught yourself smiling — <em>and knew exactly why?</em>',
+        'hero-headline': 'A life where it makes you happy to be you is closer than you think.',
+        'hero-subtitle': 'Leadership Coach · Emotional Wisdom Specialist · EMCC Accredited Supervisor',
+        'hero-btn1': 'Book a free session', 'hero-btn2': 'Stay in touch',
+        'inv-label': 'The idea behind everything',
+        'inv-lines': '<p>We all want a happier, fuller life.</p><p>It does not look the same for everyone.</p><p>And it does not start in the same place.</p>',
+        'inv-bridge': 'Maybe you are standing at a crossroads and the next step is not clear. Maybe you are exhausted and cannot remember the last time you woke up refreshed — truly ready to start the day. Maybe a relationship is complicated, offering little and taking much.<br><br>Together we build your personal blueprint — turning lived experiences into the path, and lessons learned into the light that illuminates it.<br><br><strong>Let\'s build.</strong>',
+        'svc-label': 'What would you like to work on?', 'svc-heading': 'Three ways to work together.',
+        'svc-tag': '1-to-1', 'svc-tag2': 'Supervision', 'svc-tag3': 'Group',
+        'svc1-title': 'Founding Spark', 'svc1-hook': 'You are building something. And you are the motor behind it all.', 'svc1-desc': 'We work with your longings and unfinished business — and with what lies behind them. Because how you lead yourself determines everything else. One-to-one coaching for entrepreneurs and independent professionals.', 'svc1-btn': 'Book a clarity session',
+        'svc2-title': 'Coaching Supervision', 'svc2-hook': 'A brave space for reflection, reflexion, regeneration, and growth as a coach.', 'svc2-desc': 'For coaches, mentors, and supervisors ready to deepen their practice. Individual and group supervision in a confidential, professionally grounded space. EMCC accredited. Sessions in English or Spanish.<br><br>Our world is uncertain, complex, and often contradictory. Supervision is where we explore and unpack. Where you build the inner tools to meet it with steadiness, and guide others to do so too.', 'svc2-btn': 'Book a session',
+        'svc3-title': 'Circles', 'svc3-hook': 'Learning is deeper when it happens together.', 'svc3-desc': 'Group coaching in a structured, supportive space for shared questioning, understanding and creating awareness. Join a circle and grow alongside others asking the same questions.', 'svc3-btn': 'Join a circle →',
+        'waitlist-btn': 'Join the waitlist',
+        'svc1-hook': 'By deciding what you protect, you decide who you are.',
+        'svc1-desc': 'This is not about building walls — it is about knowing yourself so deeply that you can manage the world on your own terms. You walk away with confidence, resilience, and creativity. When you say yes, it truly means yes. Your presence becomes fuller, calmer, and genuinely there. The people around you will notice the difference too.',
+        'svc2-hook': 'Finding messages in your emotions.',
+        'svc2-desc': 'E-motions are energy in motion. Learn practical skills to understand your emotional architecture and navigate life\'s challenges. Your emotions are not problems to solve — they are indicators. They bring you information about your beliefs, mindset, lived experiences, patterns, and more. Let\'s read this information, and act upon it.',
+        'svc3-hook': 'Smart rest is not a luxury — it is a need. And a performance hack.',
+        'svc3-desc': 'The quality and level of your energy impacts everything you do: your relationships, your work, your creativity, and even your hobbies. Build your own plan to keep your energy at its highest quality. The most authentic version of you runs on a full charge.',
+        'waitlist-btn': 'Join the waitlist',
+        'phil-quote': '"What if your emotions hide the solution — and hold within them the answer?"',
+        'fs-label': 'Free sessions · 4Seas Nimman · Chiang Mai', 'fs-heading': 'Come and experience the work.', 'fs-sub': 'No commitment, no pressure. One practical tool to take home every week.',
+        'fs1-day': 'Every Friday', 'fs1-desc': 'For anyone exhausted, burned out, or struggling to sleep. Understand why rest alone is not enough — and what your nervous system actually needs.',
+        'fs2-day': 'Every Tuesday', 'fs2-desc': 'Understand why you feel what you feel — in relationships, at work, with family. Learn to read the signal your emotions are sending instead of fighting the feeling.',
+        'fs-note': 'In English · Free to attend · 4Seas Nimman, Chiang Mai',
+        'tedx-label': 'TEDx Thonglor Women · 26 April 2026',
+        'tedx-body': 'How well do you know the people closest to you? Do you truly understand why they made the decisions they did — or are you still reading them through an old script?<br><br>Join Isabel at TEDx Thonglor Women as she introduces a bolder way to navigate our most demanding relationships: <em>Defining Balance for the Sandwich Generation.</em>',
+        'tedx-btn': 'Find out more',
+        'bp-label': '4-Session Programme', 'bp-heading': 'Your Personal Blueprint',
+        'bp-body': 'A four-week hands-on programme where you clarify your priorities and begin the journey to reach them.<br><br>Most people arrive with something specific in mind — a relationship that is not working, a career transition, a body that will not rest, a version of themselves they have not yet become.<br><br>Over those four sessions, we start the journey back to the most authentic version of you. We go beneath the surface. We find the patterns, the beliefs, the emotional signals you have been trying to ignore. And we build something practical — a clear, personal path that is yours to walk.<br><br>This is not a formula. It is a map we draw together.',
+        'bp-check1': 'Four one-hour sessions at your pace', 'bp-check2': 'In person in Chiang Mai or online worldwide', 'bp-check3': 'A book: <em>New Boundaries</em> — 8-step framework &amp; 28-day workbook',
+        'bp-btn': 'Let\'s talk about your blueprint',
+        'bp-quote': '"You will find your motivation, your reason why. And together, we will gently build the path you will walk to get there."',
+        'about-label': 'About Isabel', 'about-role': 'Leadership Coach · Emotional Wisdom Specialist · EMCC Accredited Supervisor',
+        'about-bio': 'I am a systemic coach who blends emotional wisdom, somatic awareness, and design thinking to help people lead with empathy and clarity.<br><br>Over 20 years and across 11 cities in 7 countries, I have guided professionals through life\'s most demanding transitions. I work at the intersection of the nervous system, emotional intelligence, and the body\'s own wisdom — because real change lives in the body before it reaches the mind.<br><br>With a background in systems engineering, behavioural science, and cultural dynamics, I guide leaders and individuals towards meaningful, lasting transformation.',
+        'cred1': 'EMCC Accredited Supervisor', 'cred2': 'Published Author', 'cred3': 'TEDx Speaker 2026', 'cred4': 'Systems Engineer', 'cred5': '20 Years Experience',
+        'about-tedx': 'TEDx talk: <em>Defining Balance for the Sandwich Generation</em> · 26 April 2026',
+        'test-label': 'What clients say', 'test-heading': 'The work speaks for itself.',
+        'test-attr1': 'Leadership Coach', 'test-attr2': 'Team Coach', 'test-attr3': 'Coaching client',
+        'stay-heading': 'Stay in touch.', 'stay-sub': 'Not ready to book yet? Leave your name and email and tell us what brings you here. We will be in touch — no pressure, no noise.'
+      },
+      es: {
+        'nav-sessions': 'Sesiones gratuitas', 'nav-about': 'Sobre mí', 'nav-stay': 'Mantente en contacto', 'nav-book': 'Hablemos — Sesión de Claridad 20 min',
+        'tedx-badge': 'TEDx Thonglor Women · 26 de abril de 2026',
+        'hero-opening': '¿Cuándo fue la última vez que te sentiste feliz de ser tú?<br><em>Sin fingir, sin actuar, sin planificar, sin luchar.</em><br><br>¿Cuándo fue la última vez que te dijiste — en silencio, a ti misma — <em>eso estuvo bien.</em><br>Sin presumir. Solo dándote cuenta.<br><br>¿Cuándo fue la última vez que te sorprendiste sonriendo — <em>y supiste exactamente por qué?</em>',
+        'hero-headline': 'Una vida en la que te hace feliz ser tú está más cerca de lo que crees.',
+        'hero-subtitle': 'Coach de Liderazgo · Especialista en Sabiduría Emocional · Supervisora Acreditada EMCC',
+        'hero-btn1': 'Reserva una sesión gratuita', 'hero-btn2': 'Mantente en contacto',
+        'inv-label': 'La idea detrás de todo',
+        'inv-lines': '<p>Todos queremos una vida más plena y feliz.</p><p>Y es diferente para cada uno.</p><p>Y empieza en lugares diferentes.</p>',
+        'inv-bridge': 'Quizás estás en una encrucijada y el siguiente paso no está claro. Quizás estás agotada y no recuerdas la última vez que te despertaste tranquila, con ganas de empezar el día. Quizás estás en una relación complicada, que te ofrece poco y te quita mucho.<br><br>Juntas construimos tu plano personal — convirtiendo experiencias vividas en el camino, y lecciones aprendidas en la luz que lo ilumina.<br><br><strong>Vamos a construir.</strong>',
+        'svc-label': '¿Con qué te gustaría trabajar?', 'svc-heading': 'Tres formas de trabajar juntas.',
+        'svc-tag': '1-a-1', 'svc-tag2': 'Supervisión', 'svc-tag3': 'Grupal',
+        'svc1-title': 'Founding Spark', 'svc1-hook': 'Estás construyendo algo. Y tú eres el motor detrás de todo.', 'svc1-desc': 'Trabajamos con tus anhelos y pendientes, y con lo que hay detrás. Porque cómo te lideras a ti misma determina todo lo demás. Coaching individual para emprendedores y profesionales independientes.', 'svc1-btn': 'Reserva una sesión de claridad',
+        'svc2-title': 'Supervisión de Coaching', 'svc2-hook': 'Un espacio valiente para la reflexión, la introspección profunda, la regeneración y el crecimiento como coach.', 'svc2-desc': 'Para coaches, mentores y supervisores decididos a profundizar su práctica. Supervisión individual y grupal en un espacio agradable y seguro, profesionalmente fundamentado. Acreditación EMCC. Sesiones en inglés o español.<br><br>Nuestro mundo es incierto, complejo y a menudo contradictorio. La supervisión es donde exploramos y desempacamos. Donde tú diseñas las herramientas internas para gestionarlo con firmeza y tranquilidad, y guías a otros a hacer lo mismo.', 'svc2-btn': 'Reservar una sesión',
+        'svc3-title': 'Círculos', 'svc3-hook': 'El aprendizaje se profundiza cuando ocurre en comunidad.', 'svc3-desc': 'Coaching grupal en un espacio estructurado y de apoyo mutuo, para juntos cuestionar, comprender e integrar. Únete a un círculo y crece junto a otros que están haciendo las mismas preguntas.', 'svc3-btn': 'Únete a un círculo →',
+        'waitlist-btn': 'Únete a la lista de espera',
+        'svc1-hook': 'Al decidir lo que proteges, decides quién eres.',
+        'svc1-desc': 'Esto no se trata de construir muros — se trata de conocerte tan profundamente que puedas gestionar al mundo en tus propios términos. Te vas con seguridad en ti misma, resiliencia y creatividad. Cuando dices "sí", realmente significa sí. Tu presencia se vuelve plena, tranquila y genuinamente presente. Las personas a tu alrededor notarán la diferencia.',
+        'svc2-hook': 'Encontrando mensajes en las emociones.',
+        'svc2-desc': 'Las e-mociones son energía en movimiento. Aprende habilidades prácticas para comprender tu arquitectura emocional y cómo navegar los desafíos de la vida. Tus emociones no son problemas a resolver — son indicadores. Te traen información sobre tus creencias, mentalidad, experiencias, patrones y más. Leamos esta información y actuemos en consecuencia.',
+        'svc3-hook': 'El descanso inteligente no es un lujo — es una necesidad. Y además un potenciador del rendimiento.',
+        'svc3-desc': 'La calidad y el nivel de tu energía impacta todo lo que haces: tus relaciones, tu trabajo, tu creatividad y hasta tus pasatiempos. Construye tu propio plan para mantenerte con energía de alta calidad. La versión más auténtica de ti funciona con la batería llena.',
+        'waitlist-btn': 'Únete a la lista de espera',
+        'phil-quote': '¿Y si tus emociones esconden la solución — y guardan dentro de ellas la respuesta?',
+        'fs-label': 'Sesiones gratuitas · 4Seas Nimman · Chiang Mai', 'fs-heading': 'Ven y vive la experiencia.', 'fs-sub': 'Sin compromiso, sin presión. Una herramienta práctica para llevar a casa cada semana.',
+        'fs1-day': 'Todos los viernes', 'fs1-desc': 'Para quien está agotado, quemado o con dificultades para dormir. Entiende por qué el descanso solo no es suficiente — y lo que tu sistema nervioso realmente necesita.',
+        'fs2-day': 'Todos los martes', 'fs2-desc': 'Entiende por qué sientes lo que sientes — en tus relaciones, en el trabajo, con tu familia. Aprende a leer la señal que te envían tus emociones en lugar de luchar contra el sentimiento.',
+        'fs-note': 'En inglés · Entrada gratuita · 4Seas Nimman, Chiang Mai',
+        'tedx-label': 'TEDx Thonglor Women · 26 de abril de 2026',
+        'tedx-body': '¿Qué tan bien conoces a las personas más cercanas a ti? ¿Comprendes verdaderamente por qué tomaron las decisiones que tomaron — o todavía los estás leyendo a través de un guión antiguo?<br><br>Únete a Isabel en TEDx Thonglor Women mientras presenta una manera más audaz de navegar nuestras relaciones más exigentes: <em>Definiendo el Equilibrio para la Generación Sándwich.</em>',
+        'tedx-btn': 'Saber más',
+        'bp-label': 'Programa de 4 Semanas', 'bp-heading': 'Tu Hoja de Ruta Personal',
+        'bp-body': 'Un programa práctico de cuatro semanas donde clarificas tus prioridades y comienzas el camino para alcanzarlas.<br><br>La mayoría de las personas llegan con algo específico en mente — una relación que no funciona, una transición laboral, un cuerpo que no descansa, una versión de sí mismas que aún no han llegado a ser.<br><br>En esas cuatro sesiones, iniciamos el camino de regreso a ti auténtica. Vamos más allá de la superficie. Encontramos los patrones, las creencias, las señales emocionales que has estado tratando de ignorar. Y construimos algo práctico — una hoja de ruta personal que es tuya para recorrer.<br><br>Esto no es una fórmula. Es un mapa que dibujamos juntas.',
+        'bp-check1': 'Cuatro sesiones de una hora a tu ritmo', 'bp-check2': 'Presencial en Chiang Mai o en línea en cualquier parte del mundo', 'bp-check3': 'Un libro: <em>New Boundaries</em> — marco de 8 pasos y cuaderno de trabajo de 28 días',
+        'bp-btn': 'Hablemos de tu hoja de ruta',
+        'bp-quote': '"Encontrarás tu motivación, tu razón. Y juntas, construiremos suavemente el camino que recorrerás para llegar allí."',
+        'about-label': 'Sobre Isabel', 'about-role': 'Coach de Liderazgo · Especialista en Sabiduría Emocional · Supervisora Acreditada EMCC',
+        'about-bio': 'Soy una coach sistémica que combina sabiduría emocional, conciencia somática y pensamiento de diseño para ayudar a las personas a liderar con empatía y claridad.<br><br>A lo largo de 20 años y en 11 ciudades en 7 países, he guiado a profesionales a través de las transiciones más exigentes de la vida. Trabajo en la intersección del sistema nervioso, la inteligencia emocional y la sabiduría del cuerpo — porque el cambio real vive en el cuerpo antes de llegar a la mente.<br><br>Con formación en ingeniería de sistemas, ciencias del comportamiento y dinámicas culturales, guío a líderes e individuos hacia una transformación significativa y duradera.',
+        'cred1': 'Supervisora Acreditada EMCC', 'cred2': 'Autora Publicada', 'cred3': 'Oradora TEDx 2026', 'cred4': 'Ingeniería de Sistemas', 'cred5': '20 Años de Experiencia',
+        'about-tedx': 'Charla TEDx: <em>Definiendo el Equilibrio para la Generación Sándwich</em> · 26 de abril de 2026',
+        'test-label': 'Lo que dicen los clientes', 'test-heading': 'El trabajo habla por sí mismo.',
+        'test-attr1': 'Coach de Liderazgo', 'test-attr2': 'Coach de Equipos', 'test-attr3': 'Cliente de coaching',
+        'stay-heading': 'Mantente en contacto.', 'stay-sub': '¿Aún no estás lista para reservar? Déjanos tu nombre y correo electrónico y cuéntanos qué te trae aquí. Estaremos en contacto — sin presión, sin ruido.'
+      }
+    };
+
+    function setLang(lang) {
+      const t = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.documentElement.lang = lang;
+      const tallyId = lang === 'es' ? 'pb7VR8' : 'rjVOd5';
+      const iframe = document.getElementById('tally-iframe');
+      if (iframe) iframe.src = 'https://tally.so/embed/' + tallyId + '?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1';
+    }
+
+    var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.getElementById("tally-js")==null){var s=d.createElement("script");s.src=w;s.id="tally-js";s.onload=v;d.body.appendChild(s);}
+  </script>
+</body>
+</html>
