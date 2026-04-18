@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaching Supervision · Isabel V Echavarria · EMCC Accredited</title>
+  <meta name="description" content="EMCC accredited coaching supervision with Isabel V Echavarria. Individual and group supervision for coaches, mentors and supervisors — online and in person, in English or Spanish.">
+  <meta name="keywords" content="coaching supervisor, EMCC coaching supervision, supervision for coaches, group supervision coaches, supervisión de coaching, supervisora EMCC, Isabel V Echavarria">
+  <meta name="author" content="Isabel V Echavarria">
+  <link rel="canonical" href="https://supervisorcoaching.com/supervision">
+  <meta property="og:title" content="Coaching Supervision · Isabel V Echavarria">
+  <meta property="og:description" content="EMCC accredited supervision for coaches, mentors and supervisors. Individual and group. Online and in person. English and Spanish.">
+  <meta property="og:url" content="https://supervisorcoaching.com/supervision">
+  <meta property="og:type" content="website">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a18; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    :root { --salmon: #E8735A; --aqua: #1BBFB0; --cream: #FFF8F5; --stone: #f7f5f0; --ink: #1a1a18; --muted: #5F5E5A; --border: #e8e0d8; }
+
+    .btn { display: inline-block; border-radius: 8px; padding: 14px 28px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 15px; cursor: pointer; transition: all 0.2s; border: none; text-align: center; }
+    .btn-salmon { background: var(--salmon); color: #fff; }
+    .btn-salmon:hover { filter: brightness(0.92); }
+    .btn-outline-salmon { background: transparent; color: var(--salmon); border: 2px solid var(--salmon); }
+    .btn-outline-salmon:hover { background: #FFF0EC; }
+    .btn-outline-aqua { background: transparent; color: var(--aqua); border: 2px solid var(--aqua); }
+    .btn-outline-aqua:hover { background: #E8F8F6; }
+
+    /* NAVBAR */
+    .navbar { background: #fff; border-bottom: 0.5px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .navbar-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .navbar-logo img { height: 48px; mix-blend-mode: multiply; }
+    .navbar-right { display: flex; align-items: center; gap: 28px; }
+    .navbar-links { display: flex; gap: 28px; list-style: none; }
+    .navbar-links a { font-size: 14px; font-weight: 400; color: var(--ink); transition: color 0.2s; }
+    .navbar-links a:hover { color: var(--salmon); }
+    .navbar-cta { background: var(--salmon); color: #fff !important; padding: 8px 20px; border-radius: 8px; font-weight: 500 !important; font-size: 14px; white-space: nowrap; }
+    .navbar-cta:hover { filter: brightness(0.92); }
+    .lang-toggle { display: flex; align-items: center; gap: 4px; background: var(--stone); border-radius: 20px; padding: 4px 6px; border: 1px solid var(--border); }
+    .lang-btn { font-size: 12px; font-weight: 500; font-family: 'Inter', sans-serif; padding: 4px 10px; border-radius: 16px; border: none; background: transparent; color: var(--muted); cursor: pointer; transition: all 0.2s; letter-spacing: 0.05em; }
+    .lang-btn.active { background: #fff; color: var(--salmon); box-shadow: 0 1px 4px rgba(0,0,0,0.10); }
+
+    /* HERO */
+    .page-hero { background: var(--cream); padding: 80px 0 72px; }
+    .page-hero-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 340px; gap: 72px; align-items: center; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); margin-bottom: 28px; transition: color 0.2s; }
+    .back-link:hover { color: var(--salmon); }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+    .page-hero-heading { font-family: 'Lora', serif; font-size: 38px; font-weight: 400; color: var(--ink); margin-bottom: 20px; line-height: 1.3; }
+    .page-hero-hook { font-family: 'Lora', serif; font-size: 19px; font-style: italic; color: var(--aqua); margin-bottom: 28px; line-height: 1.6; }
+    .page-hero-sub { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 36px; }
+    .hero-photo-img { width: 100%; border-radius: 16px; }
+    .credential-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .credential-pill { background: #fff; color: var(--salmon); border: 1px solid var(--salmon); font-size: 12px; font-weight: 500; padding: 7px 16px; border-radius: 20px; }
+
+    /* WHAT IS SUPERVISION */
+    .what-is { background: #fff; padding: 88px 0; }
+    .what-is-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .what-is-heading { font-family: 'Lora', serif; font-size: 28px; font-weight: 400; color: var(--ink); margin-bottom: 24px; margin-top: 12px; }
+    .what-is-body { font-size: 16px; line-height: 1.85; color: var(--muted); }
+    .what-is-body p { margin-bottom: 18px; }
+    .quote-block { background: var(--cream); border-left: 4px solid var(--aqua); border-radius: 0 14px 14px 0; padding: 36px 36px; }
+    .quote-text { font-family: 'Lora', serif; font-size: 18px; font-style: italic; line-height: 1.85; color: var(--ink); margin-bottom: 16px; }
+    .quote-attr { font-size: 13px; color: var(--aqua); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* FORMATS */
+    .formats { background: var(--stone); padding: 88px 0; }
+    .formats-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .formats-header { text-align: center; margin-bottom: 56px; }
+    .formats-heading { font-family: 'Lora', serif; font-size: 28px; font-weight: 400; color: var(--ink); margin-top: 12px; }
+    .formats-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .format-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
+    .format-card-bar { height: 5px; }
+    .format-card-bar.salmon { background: var(--salmon); }
+    .format-card-bar.aqua { background: var(--aqua); }
+    .format-card-body { padding: 32px 32px 24px; flex: 1; }
+    .format-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .format-title { font-family: 'Lora', serif; font-size: 22px; font-weight: 500; color: var(--ink); margin-bottom: 14px; }
+    .format-desc { font-size: 15px; line-height: 1.75; color: var(--muted); }
+    .format-detail { font-size: 13px; color: var(--aqua); font-weight: 500; margin-top: 16px; }
+    .format-card-footer { padding: 20px 32px 32px; }
+
+    /* APPROACH */
+    .approach { background: var(--aqua); padding: 80px 0; }
+    .approach-inner { max-width: 780px; margin: 0 auto; padding: 0 24px; text-align: center; }
+    .approach-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 20px; }
+    .approach-text { font-family: 'Lora', serif; font-size: 20px; font-style: italic; color: #fff; line-height: 1.9; }
+
+    /* TESTIMONIAL */
+    .testimonial-section { background: #fff; padding: 88px 0; }
+    .testimonial-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; text-align: center; }
+    .testimonial-quote { font-family: 'Lora', serif; font-size: 20px; font-style: italic; line-height: 1.85; color: var(--ink); margin-bottom: 24px; }
+    .testimonial-divider { width: 36px; height: 2px; background: var(--aqua); margin: 0 auto 12px; }
+    .testimonial-attr { font-size: 13px; color: var(--muted); }
+
+    /* STAY */
+    .stay { background: var(--salmon); padding: 88px 0; }
+    .stay-inner { max-width: 580px; margin: 0 auto; padding: 0 24px; }
+    .stay-heading { font-family: 'Lora', serif; font-size: 30px; font-weight: 400; color: #fff; margin-bottom: 12px; }
+    .stay-sub { font-size: 16px; color: rgba(255,255,255,0.88); line-height: 1.75; margin-bottom: 36px; }
+
+    /* FOOTER */
+    .footer { background: #1a1a18; padding: 56px 24px; text-align: center; }
+    .footer-logo { height: 56px; margin: 0 auto 24px; }
+    .footer-contact { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 10px; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+    @media (max-width: 768px) {
+      .navbar-links { display: none; }
+      .page-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .page-hero-heading { font-size: 28px; }
+      .what-is-inner { grid-template-columns: 1fr; gap: 40px; }
+      .formats-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a class="navbar-logo" href="index.html"><img src="simbolo-principal.png" alt="Isabel V Echavarria"></a>
+      <div class="navbar-right">
+        <ul class="navbar-links">
+          <li><a href="index.html#about" data-i18n="nav-about">About</a></li>
+          <li><a href="index.html#stay" data-i18n="nav-stay">Stay in touch</a></li>
+          <li><a href="https://calendar.app.google/yjYYAfy1vtNLycLs6" target="_blank" class="navbar-cta" data-i18n="nav-book">Book a session</a></li>
+        </ul>
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <a href="index.html" class="back-link" data-i18n="back-link">← Back to home</a>
+        <p class="section-label" data-i18n="hero-label">Coaching Supervision · EMCC Accredited</p>
+        <h1 class="page-hero-heading" data-i18n="hero-heading">Supervision.</h1>
+        <p class="page-hero-hook" data-i18n="hero-hook">The fertile ground beneath your practice.</p>
+        <p class="page-hero-sub" data-i18n="hero-sub">Individual and group supervision for coaches, mentors and supervisors ready to deepen their practice. Sessions in English or Spanish — online or in person.</p>
+        <div class="credential-pills">
+          <span class="credential-pill" data-i18n="pill1">EMCC Accredited Supervisor</span>
+          <span class="credential-pill" data-i18n="pill2">22 Years Experience</span>
+          <span class="credential-pill" data-i18n="pill3">3 Continents</span>
+          <span class="credential-pill" data-i18n="pill4">English & Spanish</span>
+        </div>
+      </div>
+      <div>
+        <img src="isa_2025_smile_02-removebg-preview_2.jpg" alt="Isabel V Echavarria" class="hero-photo-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS SUPERVISION -->
+  <section class="what-is">
+    <div class="what-is-inner">
+      <div>
+        <p class="section-label" data-i18n="what-label">What supervision is</p>
+        <h2 class="what-is-heading" data-i18n="what-heading">Where you bring the work that stays with you.</h2>
+        <div class="what-is-body">
+          <p data-i18n="what-p1">The session that didn't land. The client you can't quite read. The moment you wondered whether it was them — or you.</p>
+          <p data-i18n="what-p2">Supervision is a space to explore without preconceptions. To try things out, to get it wrong and understand why. To ask the questions you haven't yet put into words.</p>
+          <p data-i18n="what-p3">After a session you feel more clearly yourself. You've had a space to hear yourself think, reflect, reflex, and start over. With a wider view of who you are as a coach, and of the clients you serve.</p>
+          <p data-i18n="what-p4">Nurtured by coaching, mentoring, and more. The fertile ground from which everything else in your practice can grow.</p>
+        </div>
+      </div>
+      <div class="quote-block">
+        <p class="quote-text" data-i18n="quote-text">"A supervisee brought to a session the approaching end of a long coaching engagement, 12 sessions. Together we reframed it: treat eleven as the final session, and twelve as the beginning of a new relationship. Her client signed up again from a completely different angle."</p>
+        <p class="quote-attr" data-i18n="quote-attr">— From supervision practice</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH STRIP -->
+  <section class="approach">
+    <div class="approach-inner">
+      <p class="approach-label" data-i18n="approach-label">The approach</p>
+      <p class="approach-text" data-i18n="approach-text">22 years. 3 continents. Coaches, leaders and teams across cultures, sectors and generations.<br>Multicultural. Multisector. Multigenerational.<br>I bring all of it into the room.</p>
+    </div>
+  </section>
+
+  <!-- FORMATS -->
+  <section class="formats">
+    <div class="formats-inner">
+      <div class="formats-header">
+        <p class="section-label" data-i18n="formats-label">How we work</p>
+        <h2 class="formats-heading" data-i18n="formats-heading">Two ways to work together.</h2>
+      </div>
+      <div class="formats-cards">
+
+        <div class="format-card">
+          <div class="format-card-bar aqua"></div>
+          <div class="format-card-body">
+            <p class="format-tag" data-i18n="f1-tag">Individual</p>
+            <h3 class="format-title" data-i18n="f1-title">One-to-One Supervision</h3>
+            <p class="format-desc" data-i18n="f1-desc">A confidential space dedicated entirely to your practice. We work with what you bring — cases, patterns, questions, moments of uncertainty. Sessions are shaped by what you need, not a fixed agenda.</p>
+            <p class="format-detail" data-i18n="f1-detail">Online or in person · English or Spanish</p>
+          </div>
+          <div class="format-card-footer">
+            <a href="https://calendar.app.google/yjYYAfy1vtNLycLs6" target="_blank" class="btn btn-outline-aqua" style="font-size:14px;padding:10px 20px;" data-i18n="f1-btn">Book a clarity session</a>
+          </div>
+        </div>
+
+        <div class="format-card">
+          <div class="format-card-bar salmon"></div>
+          <div class="format-card-body">
+            <p class="format-tag" data-i18n="f2-tag">Group</p>
+            <h3 class="format-title" data-i18n="f2-title">Group Supervision</h3>
+            <p class="format-desc" data-i18n="f2-desc">A small, carefully formed group of 3 to 6 coaches. Monthly sessions — you commit to six over the year, choosing from twelve available dates. The group becomes a community of practice: a place where learning is multiplied by the collective.</p>
+            <p class="format-detail" data-i18n="f2-detail">3–6 coaches · Monthly · 6 sessions per year</p>
+          </div>
+          <div class="format-card-footer">
+            <a href="index.html#stay" class="btn btn-outline-salmon" style="font-size:14px;padding:10px 20px;" data-i18n="f2-btn">Join the waitlist</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section">
+    <div class="testimonial-inner">
+      <p class="section-label" data-i18n="test-label">What supervisees say</p>
+      <p class="testimonial-quote" data-i18n="test-quote">"After only ten minutes of discussion I already got support and direction. I can follow it or go another way — but I already got an insight. It was great."</p>
+      <div class="testimonial-divider"></div>
+      <p class="testimonial-attr" data-i18n="test-attr">Leadership Coach</p>
+    </div>
+  </section>
+
+  <!-- STAY -->
+  <section class="stay" id="stay">
+    <div class="stay-inner">
+      <h2 class="stay-heading" data-i18n="stay-heading">Ready to explore?</h2>
+      <p class="stay-sub" data-i18n="stay-sub">Book a 20-minute clarity session to find out whether individual or group supervision is the right fit for where you are now.</p>
+      <a href="https://calendar.app.google/yjYYAfy1vtNLycLs6" target="_blank" class="btn btn-outline-aqua" style="border-color:rgba(255,255,255,0.6);color:#fff;" data-i18n="stay-btn">Book a clarity session</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="LOGO-PRINCIPAL-DRA.-IVE-COLORES.png" alt="Motiva Coaching & Supervision" class="footer-logo">
+    <p class="footer-contact">bloom@supervisorcoaching.com · (+66) 936 371 824</p>
+    <p class="footer-copy">© 2026 Isabel V Echavarria · supervisorcoaching.com</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        'nav-about': 'About', 'nav-stay': 'Stay in touch', 'nav-book': 'Book a session',
+        'back-link': '← Back to home',
+        'hero-label': 'Coaching Supervision · EMCC Accredited',
+        'hero-heading': 'Supervision.',
+        'hero-hook': 'The fertile ground beneath your practice.',
+        'hero-sub': 'Individual and group supervision for coaches, mentors and supervisors ready to deepen their practice. Sessions in English or Spanish — online or in person.',
+        'pill1': 'EMCC Accredited Supervisor', 'pill2': '22 Years Experience', 'pill3': '3 Continents', 'pill4': 'English & Spanish',
+        'what-label': 'What supervision is',
+        'what-heading': 'Where you bring the work that stays with you.',
+        'what-p1': 'The session that didn\'t land. The client you can\'t quite read. The moment you wondered whether it was them — or you.',
+        'what-p2': 'Supervision is a space to explore without preconceptions. To try things out, to get it wrong and understand why. To ask the questions you haven\'t yet put into words.',
+        'what-p3': 'After a session you feel more clearly yourself. You\'ve had a space to hear yourself think, reflect, reflex, and start over. With a wider view of who you are as a coach, and of the clients you serve.',
+        'what-p4': 'Nurtured by coaching, mentoring, and more. The fertile ground from which everything else in your practice can grow.',
+        'quote-text': '"A supervisee brought to a session the approaching end of a long coaching engagement, 12 sessions. Together we reframed it: treat eleven as the final session, and twelve as the beginning of a new relationship. Her client signed up again from a completely different angle."',
+        'quote-attr': '— From supervision practice',
+        'approach-label': 'The approach',
+        'approach-text': '22 years. 3 continents. Coaches, leaders and teams across cultures, sectors and generations.<br>Multicultural. Multisector. Multigenerational.<br>I bring all of it into the room.',
+        'formats-label': 'How we work', 'formats-heading': 'Two ways to work together.',
+        'f1-tag': 'Individual', 'f1-title': 'One-to-One Supervision',
+        'f1-desc': 'A confidential space dedicated entirely to your practice. We work with what you bring — cases, patterns, questions, moments of uncertainty. Sessions are shaped by what you need, not a fixed agenda.',
+        'f1-detail': 'Online or in person · English or Spanish',
+        'f1-btn': 'Book a clarity session',
+        'f2-tag': 'Group', 'f2-title': 'Group Supervision',
+        'f2-desc': 'A small, carefully formed group of 3 to 6 coaches. Monthly sessions — you commit to six over the year, choosing from twelve available dates. The group becomes a community of practice: a place where learning is multiplied by the collective.',
+        'f2-detail': '3–6 coaches · Monthly · 6 sessions per year',
+        'f2-btn': 'Join the waitlist',
+        'test-label': 'What supervisees say',
+        'test-quote': '"After only ten minutes of discussion I already got support and direction. I can follow it or go another way — but I already got an insight. It was great."',
+        'test-attr': 'Leadership Coach',
+        'stay-heading': 'Ready to explore?',
+        'stay-sub': 'Book a 20-minute clarity session to find out whether individual or group supervision is the right fit for where you are now.',
+        'stay-btn': 'Book a clarity session'
+      },
+      es: {
+        'nav-about': 'Sobre mí', 'nav-stay': 'Mantente en contacto', 'nav-book': 'Reservar sesión',
+        'back-link': '← Volver al inicio',
+        'hero-label': 'Supervisión de Coaching · Acreditación EMCC',
+        'hero-heading': 'Supervisión.',
+        'hero-hook': 'La tierra fértil que nutre y sostiene tu práctica.',
+        'hero-sub': 'Supervisión individual y grupal para coaches, mentores y supervisores que quieren profundizar su práctica. Sesiones en inglés o español — online o presencial.',
+        'pill1': 'Supervisora Acreditada EMCC', 'pill2': '22 Años de Experiencia', 'pill3': '3 Continentes', 'pill4': 'Inglés y Español',
+        'what-label': 'Qué es la supervisión',
+        'what-heading': 'Donde traes el trabajo que se queda contigo.',
+        'what-p1': 'La sesión que no se recibió como esperabas. El cliente que no acabas de comprender. El momento en que te preguntaste si era ella — o eras tú.',
+        'what-p2': 'La supervisión es un espacio para explorar sin preconceptos. Para ensayar, para equivocarte y entender por qué. Para hacer las preguntas que aún no has formulado en voz alta.',
+        'what-p3': 'Un lugar donde te sientes escuchada, cuestionada y sostenida a la vez. Más claramente tú misma. Con una visión más amplia de quién eres como coach y de los clientes que acompañas.',
+        'what-p4': 'En supervisión, te nutres del coaching, del mentoring y de mucho más. Es la tierra fértil desde la que todo lo demás en tu práctica puede crecer.',
+        'quote-text': '"Una supervisada trajo a sesión el final próximo de un proceso de coaching largo, 12 sesiones. Juntas lo reencuadramos: tratar la once como la sesión final, y la doce como el inicio de una nueva relación. Su cliente volvió a contratar desde un ángulo completamente distinto."',
+        'quote-attr': '— De la práctica de supervisión',
+        'approach-label': 'El enfoque',
+        'approach-text': '22 años. 3 continentes. Coaches, líderes y equipos de distintas culturas, sectores y generaciones.<br>Multicultural. Multisectorial. Multigeneracional.<br>Todo eso entra en la sala.',
+        'formats-label': 'Cómo trabajamos', 'formats-heading': 'Dos formas de trabajar juntas.',
+        'f1-tag': 'Individual', 'f1-title': 'Supervisión Individual',
+        'f1-desc': 'Un espacio confidencial dedicado íntegramente a tu práctica. Trabajamos con lo que traes — casos, patrones, preguntas, momentos de incertidumbre. Las sesiones se adaptan a lo que necesitas, no a una agenda fija.',
+        'f1-detail': 'Online o presencial · Inglés o español',
+        'f1-btn': 'Reserva una sesión de claridad',
+        'f2-tag': 'Grupal', 'f2-title': 'Supervisión Grupal',
+        'f2-desc': 'Un grupo pequeño y cuidadosamente formado de 3 a 6 coaches. Sesiones mensuales — te comprometes a seis a lo largo del año, eligiendo entre doce fechas disponibles. El grupo se convierte en una comunidad de práctica: un lugar donde el aprendizaje se multiplica con el colectivo.',
+        'f2-detail': '3–6 coaches · Mensual · 6 sesiones por año',
+        'f2-btn': 'Únete a la lista de espera',
+        'test-label': 'Lo que dicen los supervisados',
+        'test-quote': '"Después de solo diez minutos de conversación ya obtuve apoyo y dirección. Puedo seguirlo o tomar otro camino — pero ya tuve una revelación. Fue excelente."',
+        'test-attr': 'Coach de Liderazgo',
+        'stay-heading': '¿Lista para explorar?',
+        'stay-sub': 'Reserva una sesión de claridad de 20 minutos para descubrir si la supervisión individual o grupal es lo que mejor encaja con el momento en que estás.',
+        'stay-btn': 'Reserva una sesión de claridad'
+      }
+    };
+
+    function setLang(lang) {
+      const t = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
